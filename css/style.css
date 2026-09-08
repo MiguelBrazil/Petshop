@@ -1,0 +1,182 @@
+/*Configurações gerais*/
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(224, 176, 243);
+    color:#212529;
+}
+/*Cabeçalho*/
+header{
+    background-color:rgb(191, 134, 213);
+    text-align:center;
+    padding:20px;
+}
+/*Titulo do site*/
+header h1{
+    margin-top:10px;
+}
+/*Barra de navegação*/
+.navbar {
+    padding: 0;
+}
+
+/*Nome e logo da empresa*/
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/*Links do menu*/
+.navbar .nav-link {
+    color: #212529;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.navbar .nav-link:hover {
+    color: #7e1c73;
+}
+
+/*Slogan*/
+.slogan {
+    margin: 5px 0 0;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*Conteúdo principal*/
+main{
+    padding: 40px 20px;
+    text-align:center;
+}
+/*Carrossel*/
+#carouselDestaques {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.imagem-carrossel {
+    height: 400px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 20px;
+}
+/*Rodapé*/
+footer{
+    background-color:#212529;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+/*Produtos*/
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.produto-img {
+    height: 300px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7e1c73;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+/*Serviços*/
+.servico-card {
+    padding: 20px;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/*Botão de agendamento*/
+.btn-agendar {
+    background-color: #7e1c73;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-agendar:hover {
+    background-color: #5a1250;
+    color: white;
+}
+/*Formulário*/
+.form-section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7e1c73;
+    margin-bottom: 20px;
+}
+/* Opção de cuidados especiais do pet */
+.cuidados-pet {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+}
+
+.cuidados-pet .form-check-input {
+    margin: 0;
+    float: none;
+}
+/* Acessibilidade: destaque para navegação pelo teclado */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #212529;
+    outline-offset: 3px;
+}

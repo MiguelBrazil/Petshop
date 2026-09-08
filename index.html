@@ -3,24 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
     <title>Mia Pet House</title>
 </head>
 <body>
-    
-    <header id="index">
-        <img src="imagens/logo.png" alt="Logo Mia Pet House" width="200">
-        <h1>Mia Pet House</h1>
-        <p>Produtos e serviços para o seu pet</p>
 
-        <nav>
-            <a href="#index">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="servicos.html">Serviços</a>
-            <a href="#contato">Contato</a>
+    <header id="index">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#index">
+                    <img src="imagens/logo.png" alt="Logo da Mia Pet House"> 
+                    Mia Pet House
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menu de navegação">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#index">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/produtos.html">Produtos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/servicos.html">Serviços</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="html/cadastro.html">Cadastro</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
         </nav>
+
+        <p class="slogan">Produtos e serviços para o seu pet</p>
     </header>
 
     <main>
+        <!-- Seção de boas-vindas -->
         <section>
             <h2>Bem-vindo à Mia Pet House!</h2>
             <p>
@@ -29,6 +74,89 @@
             <p>
                 Conheça nossos acessórios, rações, produtos de higiene e serviços de banho e tosa.
             </p>
+        </section>
+        <!-- Carrossel de destaques -->
+        <section class="container my-5">
+            <h2>Destaques da Mia Pet House</h2>
+
+            <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDestaques"
+                        data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#carouselDestaques"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#carouselDestaques"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Imagens -->
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="imagens/torre-gato.png"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Torre para gatos com plataformas para descanso e recreação">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Acessórios</h3>
+                            <p>Produtos para conforto, diversão e bem-estar do seu pet.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="imagens/racao-cachorro.png"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Pacote de ração seca para cães adultos">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Rações</h3>
+                            <p>Alimentação para cães e gatos.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="imagens/tapete-higienico.png"
+                            class="d-block w-100 imagem-carrossel"
+                            alt="Pacote de tapetes higiênicos absorventes para animais">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Higiene e limpeza</h3>
+                            <p>Produtos para manter o ambiente do seu pet limpo e confortável.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botão anterior -->
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselDestaques"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <!-- Botão próximo -->
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselDestaques"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+
+            </div>
         </section>
     </main>
 
@@ -39,15 +167,22 @@
         <p>Endereço: Av. Ipiranga, 6681 - Partenon, Porto Alegre - RS</p>
 
         <p>Desenvolvido por: Miguel Brazil Saldanha</p>
+        <p>Data e hora atual: <span id="horaAtual"></span></p>
         <p>&copy; 2026 Mia Pet House. Todos os direitos reservados.</p>
 
         <nav>
             <a href="#index">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="servicos.html">Serviços</a>
+            <a href="html/produtos.html">Produtos</a>
+            <a href="html/servicos.html">Serviços</a>
+            <a href="html/cadastro.html">Cadastro</a>
         </nav>
 
     </footer>
 
+    <!--Bootstrap JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--JavaScript-->
+    <script src="js/script.js"></script>
 </body>
 </html>
